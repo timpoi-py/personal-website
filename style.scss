@@ -65,4 +65,144 @@ nav {
 .hero-sec {
   width: min(1200px, 100%);
   margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  height: 500px;
+  position: relative;
+
+  .hero-greeting {
+    --spacing: 75px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+
+    font-size: 128px;
+    font-weight: 700;
+    z-index: -1;
+    opacity: 0.1;
+    text-align: center;
+    letter-spacing: var(--spacing);
+    text-indent: var(--spacing);
+    overflow: none;
+  }
+
+  .left-sec {
+    text-align: right;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+
+    h2 {
+      font-size: 64px;
+      font-weight: 700;
+    }
+
+    a {
+      background-color: $--clr-dark-300;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.3em 1.2em;
+      border-radius: 5px;
+      transition: background-color 100ms ease-in-out;
+    }
+
+    a:hover {
+      background-color: $--clr-dark-500;
+    }
+  }
+}
+
+.about-me {
+  background-color: $--clr-dark-800-70;
+  z-index: -99;
+  height: 650px;
+
+  h1 {
+    --spacing: 75px;
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 128px;
+    font-weight: 700;
+    z-index: -1;
+    opacity: 0.1;
+    text-align: center;
+    letter-spacing: var(--spacing);
+    text-indent: var(--spacing);
+    overflow: none;
+  }
+
+  &-container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+
+    .tech-stack {
+      text-align: center;
+      display: grid;
+      justify-content: center;
+      gap: 20px;
+
+      p {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .tech-stack-icons {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .tech-stack-icons > div {
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+
+    .about-me-parag {
+      line-height: 1.8;
+      width: 44ch;
+    }
+  }
+}
+
+.projects {
+  h1 {
+    --spacing: 75px;
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 128px;
+    font-weight: 700;
+    z-index: -1;
+    opacity: 0.2;
+    text-align: center;
+    letter-spacing: var(--spacing);
+    text-indent: var(--spacing);
+    overflow: none;
+  }
 }
