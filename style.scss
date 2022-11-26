@@ -10,7 +10,7 @@ body {
     hsla(0, 0%, 8%, 0.8),
     #151515
   );
-  color: #fff;
+  color: #f2f2f2;
 }
 
 nav {
@@ -46,7 +46,7 @@ nav {
           list-style-type: none;
 
           a {
-            color: #fff;
+            color: #f2f2f2;
             text-decoration: none;
           }
         }
@@ -107,7 +107,7 @@ nav {
     a {
       background-color: $--clr-dark-300;
       text-decoration: none;
-      color: #fff;
+      color: #f2f2f2;
       font-weight: 600;
       padding: 0.3em 1.2em;
       border-radius: 5px;
@@ -185,12 +185,13 @@ nav {
 
     .about-me-parag {
       line-height: 1.8;
-      width: 44ch;
     }
   }
 }
 
 .projects {
+  padding: 0 0 2em 0;
+
   h1 {
     --spacing: 75px;
     text-align: center;
@@ -204,5 +205,144 @@ nav {
     letter-spacing: var(--spacing);
     text-indent: var(--spacing);
     overflow: none;
+  }
+
+  .projects-container {
+    width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 30px;
+
+    & > .project {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-size: 18px;
+
+        .details-title {
+          h3 {
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+
+        .proj-content {
+        }
+
+        a {
+          text-decoration: none;
+          color: #f2f2f2;
+          font-weight: 600;
+          letter-spacing: 2px;
+          text-indent: 2px;
+
+          background-color: $--clr-dark-500;
+          border-radius: 5px;
+          padding: 0.3em 1em;
+
+          transition: background-color 100ms ease-in-out;
+        }
+
+        a:hover {
+          background-color: $--clr-dark-300;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  padding: 0 0 2em;
+  background-color: $--clr-dark-800-70;
+
+  h1 {
+    --spacing: 75px;
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 128px;
+    font-weight: 700;
+    z-index: -1;
+    opacity: 0.2;
+    text-align: center;
+    letter-spacing: var(--spacing);
+    text-indent: var(--spacing);
+    overflow: none;
+  }
+
+  &-container {
+    width: 1200px;
+    margin: 0 auto;
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          $form-width: 60ch;
+
+          input {
+            width: $form-width;
+            height: 2em;
+            padding: 0.8em;
+          }
+
+          textarea {
+            width: $form-width;
+            height: 200px;
+            resize: none;
+            padding: 0.8em;
+          }
+
+          input:focus,
+          textarea:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        button {
+          background-color: $--clr-dark-300;
+          color: #f2f2f2;
+          font-weight: 700;
+          font-family: "Poppins";
+          padding: 0.3em 1em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  gap: 10px;
+  padding: 0.5em;
+  justify-content: center;
+
+  .footer-parag {
+    font-size: 16px;
+  }
+
+  .soc-med {
+    display: flex;
+    gap: 10px;
   }
 }
