@@ -393,6 +393,7 @@ footer {
   .contact {
     h1 {
       letter-spacing: 30px;
+      text-indent: 30px;
     }
   }
 }
@@ -400,7 +401,7 @@ footer {
 @media screen and (max-width: 768px) {
   .about-me {
     &-container {
-      text-align: center;
+      text-align: left;
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
