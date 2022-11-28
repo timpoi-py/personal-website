@@ -112,7 +112,7 @@ nav .nav-container a.logo h1 {
 }
 nav .nav-container .navigation ul {
   display: flex;
-  gap: 50px;
+  gap: 40px;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
