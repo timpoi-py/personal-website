@@ -96,6 +96,7 @@ nav .nav-container {
   justify-content: space-evenly;
   align-items: center;
   gap: 20px;
+  padding: 0 1em;
 }
 nav .nav-container a.logo {
   display: flex;
@@ -140,13 +141,14 @@ nav .nav-container .soc-med a:hover {
 }
 
 .hero-sec {
+  padding: 0 1em;
   width: min(1200px, 100%);
   margin: 0 auto;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  height: 500px;
+  min-height: 500px;
   position: relative;
 }
 .hero-sec .hero-greeting {
@@ -173,7 +175,7 @@ nav .nav-container .soc-med a:hover {
   gap: 20px;
 }
 .hero-sec .left-sec h2 {
-  font-size: 64px;
+  font-size: clamp(48px, 5vw, 64px);
   font-weight: 700;
 }
 .hero-sec .left-sec a {
@@ -204,7 +206,7 @@ nav .nav-container .soc-med a:hover {
   --spacing: 75px;
   text-align: center;
   white-space: nowrap;
-  font-size: clamp(96px, 5vw, 128px);
+  font-size: clamp(64px, 10vw, 128px);
   font-weight: 700;
   z-index: -1;
   opacity: 0.1;
@@ -265,7 +267,7 @@ nav .nav-container .soc-med a:hover {
 .projects h1 {
   --spacing: 75px;
   white-space: nowrap;
-  font-size: clamp(96px, 5vw, 128px);
+  font-size: clamp(64px, 10vw, 128px);
   font-weight: 700;
   opacity: 0.2;
   letter-spacing: var(--spacing);
@@ -322,13 +324,13 @@ nav .nav-container .soc-med a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 0 2em;
+  padding: 2em 0;
   background-color: rgba(23, 23, 23, 0.7);
 }
 .contact h1 {
   --spacing: 75px;
   white-space: nowrap;
-  font-size: clamp(96px, 5vw, 128px);
+  font-size: clamp(64px, 10vw, 128px);
   font-weight: 700;
   opacity: 0.2;
   letter-spacing: var(--spacing);
@@ -393,6 +395,17 @@ footer .soc-med {
   gap: 10px;
 }
 
+@media screen and (max-width: 1200px) {
+  .hero-sec .hero-greeting {
+    font-size: 96px;
+    letter-spacing: 30px;
+  }
+  .about-me h1,
+.projects h1,
+.contact h1 {
+    letter-spacing: 30px;
+  }
+}
 @media screen and (max-width: 768px) {
   .about-me-container {
     text-align: center;
@@ -419,5 +432,40 @@ footer .soc-med {
   .contact .contact-container .form-container form input,
 .contact .contact-container .form-container form textarea {
     width: 90vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  nav .nav-container {
+    justify-content: center;
+  }
+  nav .nav-container .navigation {
+    display: none;
+  }
+  .hero-sec {
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .hero-sec .hero-greeting {
+    font-size: 64px;
+    letter-spacing: 0;
+    text-indent: 0;
+  }
+  .hero-sec .right-sec img {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .hero-sec .left-sec {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .about-me h1,
+.projects h1,
+.contact h1 {
+    letter-spacing: 0;
+    text-indent: 0;
   }
 }/*# sourceMappingURL=style.css.map */
