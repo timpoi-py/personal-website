@@ -96,7 +96,7 @@ nav .nav-container {
   justify-content: space-evenly;
   align-items: center;
   gap: 20px;
-  padding: 0 1em;
+  padding: 0 1.5em;
 }
 nav .nav-container a.logo {
   display: flex;
@@ -124,7 +124,7 @@ nav .nav-container .navigation ul li a {
   text-decoration: none;
 }
 nav .nav-container .navigation ul li:hover {
-  scale: 1.1;
+  scale: 1.05;
   font-weight: 600;
 }
 nav .nav-container .soc-med {
@@ -138,6 +138,45 @@ nav .nav-container .soc-med a {
 }
 nav .nav-container .soc-med a:hover {
   rotate: 360deg;
+}
+nav .nav-container .nav-menu-burger,
+nav .nav-container .nav-menu-burger-exit {
+  display: none;
+}
+
+.small-sc-nav {
+  display: none;
+  position: relative;
+}
+.small-sc-nav .small-sc-nav-container {
+  width: 90vw;
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 99;
+  background-color: rgba(23, 23, 23, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.small-sc-nav .small-sc-nav-container .navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.small-sc-nav .small-sc-nav-container .navigation ul li {
+  list-style-type: none;
+  text-align: right;
+}
+.small-sc-nav .small-sc-nav-container .navigation ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+.small-sc-nav .small-sc-nav-container .navigation ul li:hover {
+  font-weight: 600;
 }
 
 .hero-sec {
@@ -386,12 +425,14 @@ footer {
   gap: 10px;
   padding: 0.5em;
   justify-content: center;
+  align-items: center;
 }
 footer .footer-parag {
-  font-size: 16px;
+  font-size: 14px;
 }
 footer .soc-med {
   display: flex;
+  width: 50px;
   gap: 10px;
 }
 
@@ -441,6 +482,20 @@ footer .soc-med {
   }
   nav .nav-container .navigation {
     display: none;
+  }
+  nav .nav-container .soc-med {
+    margin-right: auto;
+  }
+  nav .nav-container .nav-menu-burger,
+nav .nav-container .nav-menu-burger-exit {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  nav .nav-container .show {
+    display: block;
+  }
+  .show {
+    display: block;
   }
   .hero-sec {
     padding: 2em 0;

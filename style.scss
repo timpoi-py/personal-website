@@ -23,7 +23,7 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
-    padding: 0 1em;
+    padding: 0 1.5em;
 
     a.logo {
       display: flex;
@@ -56,7 +56,7 @@ nav {
         }
 
         li:hover {
-          scale: 1.1;
+          scale: 1.05;
           font-weight: 600;
         }
       }
@@ -74,6 +74,52 @@ nav {
 
       a:hover {
         rotate: 360deg;
+      }
+    }
+
+    .nav-menu-burger,
+    .nav-menu-burger-exit {
+      display: none;
+    }
+  }
+}
+
+.small-sc-nav {
+  display: none;
+  position: relative;
+  .small-sc-nav-container {
+    width: 90vw;
+    padding: 1em 1.5em;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99;
+
+    background-color: $--clr-dark-800-80;
+    backdrop-filter: blur(10px);
+
+    .navigation {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        padding-inline-start: 0;
+
+        li {
+          list-style-type: none;
+          text-align: right;
+
+          a {
+            color: #f2f2f2;
+            text-decoration: none;
+          }
+        }
+
+        li:hover {
+          font-weight: 600;
+        }
       }
     }
   }
@@ -370,13 +416,15 @@ footer {
   gap: 10px;
   padding: 0.5em;
   justify-content: center;
+  align-items: center;
 
   .footer-parag {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .soc-med {
     display: flex;
+    width: 50px;
     gap: 10px;
   }
 }
@@ -455,7 +503,25 @@ footer {
       .navigation {
         display: none;
       }
+
+      .soc-med {
+        margin-right: auto;
+      }
+
+      .nav-menu-burger,
+      .nav-menu-burger-exit {
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .show {
+        display: block;
+      }
     }
+  }
+
+  .show {
+    display: block;
   }
 
   .hero-sec {
